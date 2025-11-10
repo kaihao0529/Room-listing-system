@@ -1,0 +1,27 @@
+.Dashboard{
+    /* width: fit-content; */
+    height:auto;
+    background: #C0C0C0;
+}
+.Dashboard-container{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background: #C0C0C0;
+}
+.Dashboard-content{
+    display: flex;
+    margin-top: -20px;
+    /* padding-bottom: 50%; */
+    /* margin-left: 50%; */
+}
+.user-container{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.list-container{
+    background: white;
+    height: 100%;
+}
