@@ -83,6 +83,11 @@ const Dashboard = ({ open, toggleDrawer, children }) => {
         { text: 'Log out', icon: <LogoutIcon />, path: '/' }
     ];
 
+    const itemlist1 =[
+        {text: 'settings', icon:<SettingsIcon />,path:'/Settings'},
+        {text: 'Help & Feedback', icon:<HelpOutlineIcon />, path:'/Help'}
+    ];
+
     const DrawerList = (
         <Container sx={{ 
             p:{
@@ -159,11 +164,11 @@ const Dashboard = ({ open, toggleDrawer, children }) => {
                             ))}
                         </List>
                         <List sx={{ position: 'absolute', bottom: 0 }}>
-                            {['settings', 'Help & Feedback'].map((text, index) => (
-                                <ListItem key={index}>
+                            {itemlist1.map((item, index) => (
+                                <ListItem key={index} component={Link} to={item.path}>
                                     <ListItemButton>
-                                        <SettingsIcon />
-                                        <ListItemText primary={text} />
+                                        <ListItemIcon>{item.icon}</ListItemIcon>
+                                        <ListItemText  sx={{ color: 'black' }} primary={item.text} />
                                     </ListItemButton>
                                 </ListItem>
                             ))}
